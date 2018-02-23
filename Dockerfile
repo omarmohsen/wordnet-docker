@@ -1,3 +1,4 @@
+#Author: Omar Mohsen - omohsen[@]ubuntu.com
 FROM centos:7
 #Set WordNet bersion
 ENV WORDNET_VERSION 3.0
