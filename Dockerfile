@@ -12,8 +12,7 @@ WORKDIR ./WordNet-$WORDNET_VERSION
 #Configure, compile, and install
 RUN ./configure
 RUN echo  "#define USE_INTERP_RESULT 1" >> src/stubs.c
-RUN make
-RUN make install
+RUN make && make install
 #Append to PATH environmental variable
 ENV PATH $PATH:/usr/local/WordNet-$WORDNET_VERSION/bin/
 ENTRYPOINT ["wn"]
